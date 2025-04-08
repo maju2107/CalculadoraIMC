@@ -1,11 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const Classification = ({imc}) => {
-    let classificação = '';
-    if(imc<18.5){
-        classificação = 'Abaixo do peso';
-    }
+const Classification = () => {
+    let classificação = 'Abaixo do peso';
+   
     return (
         <Text style={styles.classification}>{classificação}</Text>
     );
