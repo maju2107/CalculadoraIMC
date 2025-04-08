@@ -18,6 +18,6 @@ const styles = StyleSheet.create({ // estilização da View(div) que vai conter 
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#ff2',
+    backgroundColor: '#fff',
   },
 });

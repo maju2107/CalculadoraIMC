@@ -8,10 +8,10 @@ const Classification = () => {
 
 const styles = StyleSheet.create({ // estilização do texto para apresentar o resultado do IMC
     classification: {
-        marginTop: 20,
-        fontSize: 24,
+        fontSize: 32,
+        fontWeight: 'bold',
         textAlign: 'center',
-        color: '#333',
+        marginBottom: 24,
     },
 });
 
