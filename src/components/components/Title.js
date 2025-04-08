@@ -15,4 +15,4 @@ const styles = StyleSheet.create({ //estilização do título
     },
 });
 
-export default Title; // exportando a função  Title
+export default Title; // exportando a função  
