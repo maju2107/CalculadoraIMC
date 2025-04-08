@@ -6,7 +6,7 @@ const Title = () => {
     );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ //estilização do título 
     title: {
         fontSize: 32,
         fontWeight: 'bold',
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Title;
+export default Title; // exportando a função  Title

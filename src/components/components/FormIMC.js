@@ -1,13 +1,13 @@
 import { View,TextInput,Button, StyleSheet } from 'react-native';
-import Result from './Result';
+import Result from './Result'; // importando a função Result
 import {useState} from 'react';
 
-const FormIMC = () => {
-    const [peso, setPeso] = useState('');
+const FormIMC = () => {  
+    const [peso, setPeso] = useState(''); //controlar o estado das variáveis e "incluir"(SET) o valor delas
     const [altura, setAltura] = useState('');
     const [imc, setImc] = useState(null);
 
-    const calcularIMC = () => {
+    const calcularIMC = () => { // função para calcular o IMC
         if (peso && altura) {
             const alturaMetros = parseFloat(altura) / 100;
             const imcCalculado = (parseFloat(peso) / (alturaMetros * alturaMetros)).toFixed(2);
@@ -18,26 +18,26 @@ const FormIMC = () => {
     return (
         <View style={styles.formContainer}>
             <TextInput
-             style={styles.input}
+             style={styles.input}   // input para obter valor do peso
              placeholder="Peso (kg)"
              keyboardType="numeric"
              value={peso}
              onChangeText={setPeso}
             />
             <TextInput
-             style={styles.input}
+             style={styles.input} // input para obter valor da altura
              placeholder="Altura (cm)"
              keyboardType="numeric"
              value={altura}
              onChangeText={setAltura}
             />
-            <Button title="Calcular IMC" onPress={calcularIMC} />
-            {imc && <Result imc={imc} />}
+            <Button title="Calcular IMC" onPress={calcularIMC} /> // botão para pressionar e obter o IMC
+            {imc && <Result imc={imc} />} 
             </View>
     );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({  // estilização do forms
     formContainer: {
         backgroundColor: '#f0f0f0',
         padding: 16,
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default FormIMC;
+export default FormIMC; // exportando a função FormIMC
