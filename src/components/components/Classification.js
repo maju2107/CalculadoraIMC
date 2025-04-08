@@ -1,11 +1,8 @@
-import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
 const Classification = () => {
-    let classificação = 'Abaixo do peso';
-   
     return (
-        <Text style={styles.classification}>{classificação}</Text>
+        <Text style={styles.classification}>classificação</Text>
     );
 };
 
