@@ -17,7 +17,7 @@ const styles = StyleSheet.create({ // estilização da View(div) que vai conter 
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
+    backgroundColor: '#ff2',
   },
 });
