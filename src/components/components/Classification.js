@@ -1,17 +1,22 @@
+import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const Classification = () => {
+const Classification = ({imc}) => {
+    let classificação = '';
+    if(imc<18.5){
+        classificação = 'Abaixo do peso';
+    }
     return (
-        <Text style={styles.classification}>classificação</Text>
+        <Text style={styles.classification}>{classificação}</Text>
     );
 };
 
 const styles = StyleSheet.create({ // estilização do texto para apresentar o resultado do IMC
     classification: {
-        fontSize: 32,
-        fontWeight: 'bold',
+        marginTop: 20,
+        fontSize: 24,
         textAlign: 'center',
-        marginBottom: 24,
+        color: '#333',
     },
 });
 
