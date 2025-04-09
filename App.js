@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
-import Title from './src/components/components/Title'; // Importando a função Title
-import FormIMC from './src/components/components/FormIMC'; // Importando a função FormIMC
+import Title from './src/components/components/Title.js'; // Importando a função Title
+import FormIMC from './src/components/components/FormIMC.js'; // Importando a função FormIMC
 
 export default function App() { // função que retorna o título do app e o forms para calcular o IMC
   return (
@@ -16,6 +16,6 @@ const styles = StyleSheet.create({ // estilização da View(div) que vai conter 
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#d6b2ff',
   },
 });

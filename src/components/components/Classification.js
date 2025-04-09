@@ -2,6 +2,7 @@ import { Text, StyleSheet } from 'react-native';
 
 const Classification = ({imc}) => { // função para classificar o imc
     let classificação = '';
+    let texto = 'Classificado como : '
     if(imc<18.5){
         classificação = 'Abaixo do peso';
     } else if(imc>18.5 && imc<24.9){
@@ -16,16 +17,17 @@ const Classification = ({imc}) => { // função para classificar o imc
         classificação = 'Obesidade grau 3 (obesidade mórbida)';
     }
     return (
-        <Text style={styles.classification}>{classificação}</Text> // retorna a classificação obtida através das validações
+        <Text style={styles.classification}>{texto}{classificação}</Text> // retorna a classificação obtida através das validações
     );
 };
 
 const styles = StyleSheet.create({ // estilização do texto para apresentar a classificação do IMC
     classification: {
         marginTop: 20,
-        fontSize: 24,
+        fontSize: 18,
         textAlign: 'center',
-        color: '#333',
+        color: '#dde9ff',
+        fontWeight: 'bold',
     },
 });
 
