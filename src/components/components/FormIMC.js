@@ -1,6 +1,7 @@
-import { View,TextInput,Button, StyleSheet } from 'react-native';
-import Result from './Result'; // importando a função Result
-import Classification from './Classification';
+import { View,TextInput,Button, StyleSheet } from 'react-native'; // importações
+import Result from './Result'; 
+import Classification from './Classification'; 
+import IdealWeight from './IdealWeight';
 import {useState} from 'react';
 
 const FormIMC = () => {  
