@@ -19,16 +19,18 @@ const FormIMC = () => {
             const imcCalculado = (parseFloat(peso) / (alturaEmMetros * alturaEmMetros)).toFixed(2);
             setImc (imcCalculado);
             setAlturaMetros (alturaEmMetros);
+        }else{
+            alert('Valores inválidos! Insira valores válidos para peso e/ou altura!');
         }
     }; 
 
-    const TodosOsResultados = () =>{
+    const TodosOsResultados = () =>(
         <View style={styles.div}> // div que contém os resultados 
             {imc && <Result imc={imc} />} 
             {imc && <Classification imc={imc} />} 
             {alturaMetros && <IdealWeight alturaMetros={alturaMetros} />}
             </View>
-    };
+    );
 
     return (
         <View style={styles.formContainer}>
