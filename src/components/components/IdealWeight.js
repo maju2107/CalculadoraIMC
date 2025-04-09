@@ -1,5 +1,4 @@
 import { Text, StyleSheet } from 'react-native';
-import {alturaMetros} from './FormIMC';
 
 const IdealWeight = ({alturaMetros}) => { // função que retorna o valor peso min e max de acordo com a altura em metros
     const pesoMinimoIdeal = (18.5 * (alturaMetros * alturaMetros)).toFixed(2);

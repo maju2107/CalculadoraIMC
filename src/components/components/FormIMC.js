@@ -15,7 +15,7 @@ const FormIMC = () => {
             const imcCalculado = (parseFloat(peso) / (alturaMetros * alturaMetros)).toFixed(2);
             setImc (imcCalculado);
         }
-    };
+    }; 
 
     return (
         <View style={styles.formContainer}>
