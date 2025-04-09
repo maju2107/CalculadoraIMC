@@ -17,6 +17,7 @@ const styles = StyleSheet.create({ // estilização do texto para apresentar os 
         marginTop: 20,
         fontSize: 20,
         color: '#dde9ff',
+        fontFamily: 'helvetica',
     },
 });
 
