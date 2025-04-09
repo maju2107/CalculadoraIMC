@@ -3,6 +3,9 @@ import Result from './Result';
 import Classification from './Classification'; 
 import IdealWeight from './IdealWeight';
 import {useState} from 'react';
+import { Dimensions } from 'react-native';
+
+const responsivo = Dimensions.get('window').width;
 
 const FormIMC = () => {  
     const [peso, setPeso] = useState(''); //controlar o estado das variáveis e "incluir"(SET) o valor delas
@@ -11,7 +14,7 @@ const FormIMC = () => {
     const [alturaMetros, setAlturaMetros] = useState(null); 
 
     const calcularIMC = () => { // função para calcular o IMC
-        if (peso && altura) {
+        if (peso && altura && !isNaN(peso) && !isNaN(altura)) {
             const alturaEmMetros = parseFloat(altura) / 100;
             const imcCalculado = (parseFloat(peso) / (alturaEmMetros * alturaEmMetros)).toFixed(2);
             setImc (imcCalculado);
@@ -19,11 +22,19 @@ const FormIMC = () => {
         }
     }; 
 
+    const TodosOsResultados = () =>{
+        <View style={styles.div}> // div que contém os resultados 
+            {imc && <Result imc={imc} />} 
+            {imc && <Classification imc={imc} />} 
+            {alturaMetros && <IdealWeight alturaMetros={alturaMetros} />}
+            </View>
+    };
+
     return (
         <View style={styles.formContainer}>
             <TextInput
              style={styles.input}   // input para obter valor do peso
-             placeholder="Peso (kg)"
+             placeholder="Digite seu pesinho aqui (kg)"
              placeholderTextColor="#ddd4ff"
              keyboardType="numeric"
              value={peso}
@@ -31,24 +42,21 @@ const FormIMC = () => {
             />
             <TextInput
              style={styles.input} // input para obter valor da altura
-             placeholder="Altura (cm)"
+             placeholder="Digite sua alturinha (cm)"
              placeholderTextColor="#ddd4ff"
              keyboardType="numeric"
              value={altura}
              onChangeText={setAltura}
             />
             <Button title="Calcular IMC" onPress={calcularIMC} /> // botão para pressionar e obter o IMC
-            <View style={styles.div}> // div que contém os resultados 
-            {imc && <Result imc={imc} />} 
-            {imc && <Classification imc={imc} />} 
-            {alturaMetros && <IdealWeight alturaMetros={alturaMetros} />}
-            </View>
+            {TodosOsResultados()}
             </View>
     );
 };
 
 const styles = StyleSheet.create({  // estilização do forms
     formContainer: {
+        width: screenWidth * 0.9,
         backgroundColor: '#5f1b8e',
         padding: 16,
         borderRadius: 10,
@@ -65,7 +73,7 @@ const styles = StyleSheet.create({  // estilização do forms
     div: {
         height: 260,
         borderColor: '#dda7ff',
-        borderWidth: 2       ,
+        borderWidth: 2,
         marginTop: 30,
         marginBottom: 20,
         paddingHorizontal: 8,
