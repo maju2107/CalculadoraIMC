@@ -63,7 +63,7 @@ const styles = StyleSheet.create({  // estilização do forms
         color:'#ddb9ff',
     },
     div: {
-        height: 300,
+        height: 260,
         borderColor: '#dda7ff',
         borderWidth: 2       ,
         marginTop: 30,
