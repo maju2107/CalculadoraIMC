@@ -12,8 +12,8 @@ const styles = StyleSheet.create({ //estilização do título
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 24,
-        color: '#2209c2',
-        fontFamily: 'monaco',
+        color: '#231361',
+        fontFamily: 'Georgia',
     },
 });
 
