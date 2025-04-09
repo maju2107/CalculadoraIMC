@@ -56,7 +56,7 @@ const FormIMC = () => {
 
 const styles = StyleSheet.create({  // estilização do forms
     formContainer: {
-        width: screenWidth * 0.9,
+        width: responsivo * 0.9,
         backgroundColor: '#5f1b8e',
         padding: 16,
         borderRadius: 10,
