@@ -37,7 +37,7 @@ const FormIMC = () => {
              value={altura}
              onChangeText={setAltura}
             />
-            <Button title="Calcular IMC" onPress={calcularIMC} style={styles.botao}/> // botão para pressionar e obter o IMC
+            <Button title="Calcular IMC" onPress={calcularIMC} /> // botão para pressionar e obter o IMC
             <View style={styles.div}>
             {imc && <Result imc={imc} />} 
             {imc && <Classification imc={imc} />} 
@@ -72,9 +72,6 @@ const styles = StyleSheet.create({  // estilização do forms
         borderRadius: 5,
     },
 
-    botao:{
-        backgroundColor:'#ddb5ff',
-    },
 });
 
 export default FormIMC; // exportando a função FormIMC
