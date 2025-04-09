@@ -8,12 +8,14 @@ const FormIMC = () => {
     const [peso, setPeso] = useState(''); //controlar o estado das variáveis e "incluir"(SET) o valor delas
     const [altura, setAltura] = useState('');
     const [imc, setImc] = useState(null);
+    const [alturaMetros, setAlturaMetros] = useState(null); 
 
     const calcularIMC = () => { // função para calcular o IMC
         if (peso && altura) {
-            const alturaMetros = parseFloat(altura) / 100;
-            const imcCalculado = (parseFloat(peso) / (alturaMetros * alturaMetros)).toFixed(2);
+            const alturaEmMetros = parseFloat(altura) / 100;
+            const imcCalculado = (parseFloat(peso) / (alturaEmMetros * alturaEmMetros)).toFixed(2);
             setImc (imcCalculado);
+            setAlturaMetros (alturaEmMetros);
         }
     }; 
 
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({  // estilização do forms
     input: {
         height: 40,
         borderColor: '#5a428e',
-        boderWidth: 1,
+        borderWidth: 1,
         marginBottom: 12,
         paddingHorizontal: 8,
         borderRadius: 5,
