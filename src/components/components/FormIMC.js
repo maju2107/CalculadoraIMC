@@ -39,13 +39,13 @@ const FormIMC = () => {
 
 const styles = StyleSheet.create({  // estilização do forms
     formContainer: {
-        backgroundColor: 'pink',
+        backgroundColor: '#5f1b8e',
         padding: 16,
         borderRadius: 10,
     },
     input: {
         height: 40,
-        borderColor: 'purple',
+        borderColor: '#5a428e',
         boderWidth: 1,
         marginBottom: 12,
         paddingHorizontal: 8,

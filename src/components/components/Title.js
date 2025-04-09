@@ -12,6 +12,7 @@ const styles = StyleSheet.create({ //estilização do título
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 24,
+        fontFamily: 'Noto Serif',
     },
 });
 
