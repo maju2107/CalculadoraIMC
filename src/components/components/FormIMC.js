@@ -1,5 +1,6 @@
 import { View,TextInput,Button, StyleSheet } from 'react-native';
 import Result from './Result'; // importando a função Result
+import Classification from './src/components/components/Classification';
 import {useState} from 'react';
 
 const FormIMC = () => {  
@@ -33,6 +34,7 @@ const FormIMC = () => {
             />
             <Button title="Calcular IMC" onPress={calcularIMC} /> // botão para pressionar e obter o IMC
             {imc && <Result imc={imc} />} 
+            {imc && <Classification imc={imc} />} 
             </View>
     );
 };
