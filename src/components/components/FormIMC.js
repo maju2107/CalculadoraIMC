@@ -3,9 +3,6 @@ import Result from './Result';
 import Classification from './Classification'; 
 import IdealWeight from './IdealWeight';
 import {useState} from 'react';
-import { Dimensions } from 'react-native';
-
-const responsivo = Dimensions.get('window').width;
 
 const FormIMC = () => {  
     const [peso, setPeso] = useState(''); //controlar o estado das variáveis e "incluir"(SET) o valor delas
@@ -54,7 +51,6 @@ const FormIMC = () => {
 
 const styles = StyleSheet.create({  // estilização do forms
     formContainer: {
-        width: responsivo * 0.9,
         backgroundColor: '#5f1b8e',
         padding: 16,
         borderRadius: 10,
