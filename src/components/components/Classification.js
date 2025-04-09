@@ -1,6 +1,6 @@
 import { Text, StyleSheet } from 'react-native';
 
-const Classification = ({imc}) => {
+const Classification = ({imc}) => { // função para classificar o imc
     let classificação = '';
     if(imc<18.5){
         classificação = 'Abaixo do peso';
@@ -16,7 +16,7 @@ const Classification = ({imc}) => {
         classificação = 'Obesidade grau 3 (obesidade mórbida)';
     }
     return (
-        <Text style={styles.classification}>{classificação}</Text>
+        <Text style={styles.classification}>{classificação}</Text> // retorna a classificação obtida através das validações
     );
 };
 
